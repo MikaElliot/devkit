@@ -1,0 +1,25 @@
+devkit/
+├── bin/
+│   └── devkit.js              ← entry point (#!/usr/bin/env node)
+├── src/
+│   ├── cli.js                 ← orchestrateur principal
+│   ├── prompts/
+│   │   ├── frontend.js        ← vanilla / framework, CSS, bundler, state...
+│   │   ├── backend.js         ← Node/Python/PHP/Java/Ruby/Go + framework
+│   │   ├── database.js        ← DB + ORM + migrations + seed
+│   │   └── cache.js           ← Redis / IndexedDB / localStorage / memory...
+│   ├── config/
+│   │   ├── builder.js         ← construit ProjectConfig normalisé
+│   │   └── summary.js         ← récapitulatif + confirmation avant génération
+│   ├── generators/
+│   │   ├── index.js           ← dispatcher + next steps
+│   │   ├── frontend.js        ← vanilla (Vite/TS/Sass/Tailwind) + framework
+│   │   ├── backend.js         ← fichiers réels par langage/framework
+│   │   ├── database.js        ← Prisma/Drizzle/Mongoose/SQL brut
+│   │   ├── cache.js           ← adapters complets + wrapper générique
+│   │   └── config-files.js    ← README, .gitignore, .env.example
+│   ├── installer/
+│   │   └── index.js           ← npm/pip/composer/maven/bundler
+│   └── utils/
+│       └── fs.js              ← write/mkdir helpers
+└── package.json
